@@ -14,10 +14,6 @@ type Props = {
 const Layout: VFC<Props> = ({ children, title }) => {
 	const { theme } = useContext(ThemeContext);
 
-	const handleDrawer = () => {
-		setOpen(!open);
-	};
-
 	return (
 		<>
 			<Head>

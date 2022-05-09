@@ -1,25 +1,23 @@
-import { ReactNode, VFC } from 'react';
+import { VFC } from 'react';
 import ThemeMenu from '@/components/ThemeMenu';
 
-export type HeaderProps = {
-	children: ReactNode;
-};
+export type HeaderProps = {};
 
-const Header: VFC<HeaderProps> = ({ children }) => {
+const Header: VFC<HeaderProps> = () => {
 	return (
-		<div class="pb-6 sm:pb-8 lg:pb-12">
-			<header class="border-b mb-8">
-				<div class="max-w-screen-2xl flex justify-between items-center px-4 md:px-8 mx-auto">
+		<div className="pb-6 sm:pb-8 lg:pb-12">
+			<header className="border-b mb-8">
+				<div className="max-w-screen-2xl flex justify-between items-center px-4 md:px-8 mx-auto">
 					<a
 						href="/"
-						class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
+						className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
 						aria-label="logo"
 					>
 						<svg
 							width="32"
 							height="32"
 							viewBox="0 0 32 32"
-							class="w-6 h-auto text-green-600"
+							className="w-6 h-auto text-green-600"
 							fill="currentColor"
 							xmlns="http://www.w3.org/2000/svg"
 						>
@@ -28,10 +26,10 @@ const Header: VFC<HeaderProps> = ({ children }) => {
 						175
 					</a>
 
-					<div class="flex border-l border-r divide-x">
+					<div className="flex border-l border-r divide-x">
 						<a
 							href="#"
-							class="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex flex-col justify-center items-center active:bg-gray-200 transition duration-100 gap-1.5"
+							className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex flex-col justify-center items-center active:bg-gray-200 transition duration-100 gap-1.5"
 						>
 							<ThemeMenu />
 						</a>

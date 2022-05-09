@@ -1,18 +1,16 @@
-import React from 'react';
+import { VFC, useContext, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from '@/themes/Context';
 
-export type ThemeMenuProps = {
-	children: React.ReactNode;
-};
+export type ThemeMenuProps = {};
 
-const ThemeMenu: React.VFC<ThemeMenuProps> = ({ children }) => {
-	const { setTheme } = React.useContext(ThemeContext);
+const ThemeMenu: VFC<ThemeMenuProps> = () => {
+	const { setTheme } = useContext(ThemeContext);
 
-	const [anchorEl, setAnchorEl] = React.useState(null);
+	const [anchorEl, setAnchorEl] = useState(null);
 
 	const handleClick = (e: any) => {
 		setAnchorEl(e.currentTarget);
@@ -51,8 +49,6 @@ const ThemeMenu: React.VFC<ThemeMenuProps> = ({ children }) => {
 					ダークテーマ
 				</MenuItem>
 			</Menu>
-
-			{children}
 		</>
 	);
 };
