@@ -1,12 +1,17 @@
 const path = require('path');
 
-module.exports = {
-  webpack(config, options) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      ['@']: './src',
-    };
+const urlPrefix = process.env.URL_PREFIX ? process.env.URL_PREFIX : '';
 
-    return config;
-  },
+module.exports = {
+	assetPrefix: urlPrefix,
+	basePath: urlPrefix,
+	trailingSlash: true,
+	webpack(config, options) {
+		config.resolve.alias = {
+			...config.resolve.alias,
+			['@']: './src',
+		};
+
+		return config;
+	},
 };
