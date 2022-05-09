@@ -15,7 +15,8 @@
 	"scripts": {
 		"dev": "NODE_OPTIONS='--inspect' next",
 		"start": "next",
-		"build": "next build --profile && next export",
+		"build": "next build --profile",
+		"export": "next export",
 		"serve": "serve -p 3000 ./out",
 		"test": "jest --watchAll",
 		"type-check": "tsc --noEmit && eslint .",
