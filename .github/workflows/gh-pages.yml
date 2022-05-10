@@ -24,7 +24,7 @@ jobs:
       - name: Build Next.js
         run: npm run build
         env:
-          URL_PREFIX: ./
+          URL_PREFIX: /
 
       - name: Export Next.js
         run: npm run export
